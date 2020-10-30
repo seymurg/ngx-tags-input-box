@@ -25,7 +25,7 @@ var TagsComponent = /** @class */ (function () {
             this.mode = 'cornflowerblue';
         }
         else {
-            this.mode = 'cornflowerblue';
+            this.mode = '';
         }
     };
     TagsComponent.prototype.add = function (e) {
@@ -59,8 +59,8 @@ var TagsComponent = /** @class */ (function () {
     TagsComponent = __decorate([
         Component({
             selector: 'ngx-tags-input',
-            template: "<label for=\"headerText\">{{ header }}</label>\n<input\n  type=\"text\"\n  class=\"input-tags\"\n  (change)=\"add($event)\"\n  [style.borderColor]=\"mode\"\n  [placeholder]=\"placeholder\"\n/>\n<label for=\"\">Maximum tags allowed {{ limit }} </label>\n<div class=\"righter\">\n  <span\n    class=\"labeler\" (click)=\"remove(i)\"\n    [style.backgroundColor]=\"mode\"\n    *ngFor=\"let item of tags; index as i\"\n  >\n    {{ item }}&nbsp;&times;\n  </span>\n</div>\n",
-            styles: [".input-tags{width:100%;background-color:#fff;padding:.625rem;margin:.3125rem 0;border:1px solid #000}.labeler{padding:7.5px;background-color:#6495ed;border-radius:5px;margin:.3125rem 5px;color:#fff;font-size:12px;text-transform:lowercase;cursor:pointer}.righter{text-align:right}input:focus{border:1px solid!important;outline:0;box-shadow:none}"]
+            template: "<label for=\"headerText\">{{ header }}</label>\n<input\n  type=\"text\"\n  class=\"input-tags\"\n  (change)=\"add($event)\"\n  [style.borderColor]=\"mode\"\n  [placeholder]=\"placeholder\"\n/>\n<label for=\"\">Max:{{ limit }} </label>\n<div class=\"righter\">\n  <span\n    class=\"labeler\" (click)=\"remove(i)\"\n    [style.backgroundColor]=\"mode\"\n    *ngFor=\"let item of tags; index as i\"\n  >\n    {{ item }}&nbsp;&times;\n  </span>\n</div>\n",
+            styles: [".input-tags{width:100%;background-color:#fff;padding:.625rem;margin:.3125rem 0;border:1px solid #000;}.labeler{padding:7.5px;border-radius:5px;margin:.3125rem 0 .3125rem .3125rem;color:#000000;font-size:12px;text-transform:lowercase;cursor:pointer;padding-top:10px;}.righter{text-align:right;margin:10px;}input:focus{border:1px solid!important;outline:0;box-shadow:none}"]
         })
     ], TagsComponent);
     return TagsComponent;
